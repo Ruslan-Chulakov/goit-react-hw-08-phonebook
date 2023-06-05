@@ -1,8 +1,8 @@
 import { useEffect, lazy } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import {  useDispatch } from 'react-redux';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import { getContacts} from 'redux/selectors';
+// import { getContacts} from 'redux/selectors';
 import { fetchContacts } from 'redux/operations';
 
 import { SharedLayout } from './SharedLayout/SharedLayout';
@@ -10,7 +10,7 @@ import { SharedLayout } from './SharedLayout/SharedLayout';
 // import { Login } from 'pages/Login/Login';
 // import { NotFound } from 'pages/NotFound/NotFound';
 
-import css from './App.module.css';
+// import css from './App.module.css';
 
 const Phonebook = lazy(() => import('pages/Phonebook/Phonebook'));
 const Registration = lazy(() => import('pages/Registration/Registration'));
@@ -19,7 +19,7 @@ const NotFound = lazy(()=> import('pages/NotFound/NotFound'))
  
 
 export const App = () => {
-  const contacts = useSelector(getContacts);
+  // const contacts = useSelector(getContacts);
   const dispatch = useDispatch();
 
   useEffect(() => {
