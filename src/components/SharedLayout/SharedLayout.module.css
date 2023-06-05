@@ -1,0 +1,32 @@
+.container {
+    background-color: #7fdbffd6;
+    border-radius: 50px;
+    min-height: 100vh;
+}
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    padding: 20px;
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.homeLink {
+    padding: 5px 10px;
+    background-color: rgb(255 208 22);
+    color: #b65e09;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+}
+
+.navLink {
+    text-decoration: none;
+}
