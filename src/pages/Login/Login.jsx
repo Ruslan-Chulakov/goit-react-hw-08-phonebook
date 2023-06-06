@@ -11,7 +11,6 @@ const Login = () => {
       email: e.target.email.value,
       password: e.target.password.value,
     };
-    console.log('LOGIN userData', userData);
 
     dispatch(authOperations.login(userData));
     e.target.reset();
