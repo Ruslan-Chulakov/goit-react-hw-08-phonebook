@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkreact_redux_homework=self.webpackChunkreact_redux_homework||[]).push([[427],{427:function(e,t,r){r.r(t);var n=r(184);t.default=function(){return(0,n.jsx)("div",{children:(0,n.jsxs)("form",{action:"",children:[(0,n.jsx)("input",{type:"email"}),(0,n.jsx)("input",{type:"password"}),(0,n.jsx)("button",{type:"submit",children:"Log in"})]})})}}}]);
-//# sourceMappingURL=427.44017779.chunk.js.map
