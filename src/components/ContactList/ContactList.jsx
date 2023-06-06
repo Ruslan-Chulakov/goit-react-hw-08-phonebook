@@ -12,13 +12,14 @@ import { deleteContact } from 'redux/operations';
 import css from './ContactList.module.css';
 
 const ContactList = () => {
+  const dispatch = useDispatch();
   const filter = useSelector(getFilterValue);
   const contacts = useSelector(getContacts);
   const isLoading = useSelector(getIsLoading);
   const error = useSelector(getError);
 
   if (error) {
-    Notify.failure(`${error}`)
+    Notify.failure(`${error}`);
   }
 
   function contactsToShow() {
@@ -29,8 +30,6 @@ const ContactList = () => {
       contact.name.toLowerCase().includes(filter.toLowerCase())
     );
   }
-
-  const dispatch = useDispatch();
 
   if (contactsToShow().length === 0) {
     Notify.warning('Sorry but there is no results for your request!');

@@ -1,9 +1,10 @@
 import { useEffect, lazy } from 'react';
 import {  useDispatch } from 'react-redux';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import authOperations from 'redux/authOperations';
 
 // import { getContacts} from 'redux/selectors';
-import { fetchContacts } from 'redux/operations';
+// import { fetchContacts } from 'redux/operations';
 
 import { SharedLayout } from './SharedLayout/SharedLayout';
 // import { Registration } from 'pages/Registration/Registration';
@@ -19,12 +20,11 @@ const NotFound = lazy(()=> import('pages/NotFound/NotFound'))
  
 
 export const App = () => {
-  // const contacts = useSelector(getContacts);
   const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fetchContacts())
-  },[dispatch])
+  
+   useEffect(() => {
+     dispatch(authOperations.refreshCurrentUser());
+   }, [dispatch]);
   
   return (
     <BrowserRouter basename="goit-react-hw-08-phonebook">

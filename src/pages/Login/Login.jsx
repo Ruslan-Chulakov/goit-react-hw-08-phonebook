@@ -1,13 +1,31 @@
+import { useDispatch } from 'react-redux';
+import authOperations from 'redux/authOperations';
+
 const Login = () => {
-    return (
-        <div>
-            <form action="">
-                <input type="email" />
-                <input type="password" />
-                <button type="submit">Log in</button>
-            </form>
-        </div>
-    )
+  const dispatch = useDispatch();
+
+  const handleSubmit = e => {
+    e.preventDefault();
+
+    const userData = {
+      email: e.target.email.value,
+      password: e.target.password.value,
+    };
+    console.log('LOGIN userData', userData);
+
+    dispatch(authOperations.login(userData));
+    e.target.reset();
+  };
+
+  return (
+    <div>
+      <form action="" onSubmit={handleSubmit}>
+        <input name="email" type="email" />
+        <input name="password" type="password" />
+        <button type="submit">Log in</button>
+      </form>
+    </div>
+  );
 };
 
 export default Login;
