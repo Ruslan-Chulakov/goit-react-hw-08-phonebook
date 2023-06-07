@@ -56,7 +56,9 @@ const ContactForm = () => {
         />
       </label>
 
-      <button className={clsx(css.addButton)}>Add contact</button>
+      <button className={clsx(css.addButton)} type="submit">
+        Add contact
+      </button>
     </form>
   );
 };

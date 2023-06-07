@@ -53,7 +53,6 @@ const refreshCurrentUser = createAsyncThunk(
     const persistedToken = state.authhorization.token;
 
     if (!persistedToken) {
-      console.log('persisted token is empty');
       return thunkAPI.rejectWithValue();
     }
 

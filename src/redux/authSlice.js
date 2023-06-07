@@ -22,7 +22,7 @@ const userSlice = createSlice({
       return state;
       })
       .addCase(authOperations.register.fulfilled, (state, action) => {
-        state.user = action.payload.data;
+        state.user = action.payload.user;
       state.token = action.payload.token;
       state.isLoggedIn = true;
       })
@@ -68,59 +68,6 @@ const userSlice = createSlice({
       .addCase(authOperations.refreshCurrentUser.rejected, (state, action) => {
         return state
       })
-    // [authOperations.register.pending](state, action) {
-    //   console.log('register pending');
-    //   return state;
-    // },
-    // [authOperations.register.fulfilled](state, action) {
-    //   console.log('register fullfiled action.payload: ', action.payload);
-    //   state.user = action.payload.data;
-    //   state.token = action.payload.token;
-    //   state.isLoggedIn = true;
-    // },
-    // [authOperations.register.rejected](state, action) {
-    //   console.log('register error');
-    //   state.isLoggedIn = false;
-    //   return state;
-    // },
-    // login
-    // [authOperations.login.pending](state, action) {
-    //   return state;
-    // },
-    // [authOperations.login.fulfilled](state, action) {
-    //   state.user = action.payload.user;
-    //   state.token = action.payload.token;
-    //   state.isLoggedIn = true;
-    // },
-    // [authOperations.login.rejected](state, action) {
-    //   state.isLoggedIn = false;
-    // },
-    //   logout
-    // [authOperations.logout.pending](state, action) {
-    //   return state;
-    // },
-    // [authOperations.logout.fulfilled](state, action) {
-    //   state.user = {
-    //     name: 'Incognito',
-    //     email: '',
-    //   };
-    //   state.token = '';
-    //   state.isLoggedIn = false;
-    // },
-    // [authOperations.logout.rejected](state, action) {
-    //   return state
-    //   },
-    // refreshCurrentUser
-      // [authOperations.refreshCurrentUser.pending](state, action) {
-      //   return state
-      // },
-      // [authOperations.refreshCurrentUser.fulfilled](state, action) {
-      //     state.user = action.payload;
-      //     state.isLoggedIn = true;
-      // },
-      // [authOperations.refreshCurrentUser.rejected](state, action) {
-      //     return state;
-      // }
   },
 });
 
@@ -131,4 +78,4 @@ const persistConfig = {
 };
 
 export const authReducer = userSlice.reducer;
-export const persistedAuthReducer = persistReducer(persistConfig, authReducer)
+export const persistedAuthReducer = persistReducer(persistConfig, authReducer);

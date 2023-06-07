@@ -1,4 +1,20 @@
 .userMenu {
     display: flex;
-    gap: 30px;
+    align-items: center;
+    gap: 20px;
+}
+.name {
+    font-style: italic;
+}
+
+.button {
+   padding: 5px 10px;
+   border-radius: 30px;
+   border-color: transparent;
+}
+
+.button:hover, .button:focus {
+    background-color: rgb(255 208 22);
+    color: #b65e09;
+    cursor: pointer;
 }

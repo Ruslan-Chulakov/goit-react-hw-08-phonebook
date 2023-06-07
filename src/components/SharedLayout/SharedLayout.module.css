@@ -8,14 +8,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    align-items: center;
 
     padding: 20px;
 }
 
-.nav {
-    display: flex;
-    gap: 20px;
-}
+
 
 .homeLink {
     padding: 5px 10px;
@@ -27,6 +25,20 @@
     text-decoration: none;
 }
 
+.homeLink:hover {
+    color:rgb(255 208 22);
+    background-color: rgb(255, 255, 255);
+}
+
 .navLink {
     text-decoration: none;
 }
+
+.loader {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+
+}
+

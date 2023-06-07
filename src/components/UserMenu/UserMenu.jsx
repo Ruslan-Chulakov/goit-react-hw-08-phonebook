@@ -15,8 +15,8 @@ const UserMenu = () => {
 
   return (
     <div className={clsx(css.userMenu)}>
-      {(isLoggedIn && userName) && <p>{userName}</p>}
-      <button type="button" onClick={handleClick}>
+      {(isLoggedIn && userName) && <p className={clsx(css.name)}>{userName}</p>}
+      <button type="button" onClick={handleClick} className={clsx(css.button)}>
         Logout
       </button>
     </div>

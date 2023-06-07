@@ -1,0 +1,22 @@
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.button {
+    padding: 5px 10px;
+    border-radius: 30px;
+    border-color: transparent;
+
+    text-decoration: none;
+    color: black;
+    background-color: white;
+
+    
+}
+
+.button:hover {
+    background-color: rgb(255 208 22);
+    color: #b65e09;
+    cursor: pointer;
+}
